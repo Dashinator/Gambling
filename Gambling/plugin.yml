@@ -1,0 +1,23 @@
+main: pmm.gamble.gambling.GamblingMain
+name: Gambling
+version: 0.0.1
+author: Pemo D. Ash
+description: A gambling plugin
+commands:
+   Double:
+      description: Double or nothing
+      usage: /Double <amount>
+      permission: Gambling.double
+      permission-message: You dont have the Gambling.double permission 
+      
+   Gamblers:
+      description: list all gamblers
+      usage: /Gamblers
+      permission: Gambling.List
+      permission-message: You dont have the Gambling.List permission 
+      
+   FiveCard:
+      description: Five card poker
+      usage: /FiveCard
+      permission: Gambling.FiveCard
+      permission-message: You dont have the Gambling.FiveCard permission      
