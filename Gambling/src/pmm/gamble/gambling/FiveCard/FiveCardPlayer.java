@@ -14,9 +14,19 @@ public class FiveCardPlayer {
 	{
 		this.uuid = uuid;
 		this.amount = amount;
+		hand = new ArrayList<Card>();
 	}
 	
 	public void givehand(ArrayList<Card> hand) {
 		this.hand = hand;
+	}
+	
+	public String toString() {
+		String ToString = "";
+		ToString+= "uuid: " + uuid.toString() + "\nhand: ";
+		for (Card card : hand) {
+			ToString+=card.toString() + " | ";
+		}
+		return ToString;
 	}
 }

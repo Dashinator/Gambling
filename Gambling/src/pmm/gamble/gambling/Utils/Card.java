@@ -1,6 +1,6 @@
 package pmm.gamble.gambling.Utils;
 
-public class Card {
+public class Card implements Comparable<Card> {
 	int number;
 	Suits suit;
 	
@@ -9,16 +9,35 @@ public class Card {
 		this.suit = suit;
 	}
 	
+	public Integer getNumber() {
+		return number;
+	}
+	
+	public Suits getSuit() {
+		return suit;
+	}
+	
+	public Integer getValue() {
+		return (13*suit.ordinal() + number);
+	}
+	
+	
+	
 	public String toString() {
+		String numberString = number + "";
 		if(number == 11) {
-			return "jack of " + suit.toString();
+			numberString = "jack";
 		}
 		if(number == 12) {
-			return "queen of " + suit.toString();
+			numberString = "queen";
 		}
 		if(number == 13) {
-			return "king of " + suit.toString();
+			numberString = "king";
 		}
-		return number + " of " + suit.toString();
+		return numberString + " of " + suit.toString();// + " (value = "+getValue()+" )";
 	}
+	
+    public int compareTo(Card o) {
+        return this.getNumber().compareTo(o.getNumber());
+    }
 }

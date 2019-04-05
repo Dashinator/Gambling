@@ -11,8 +11,12 @@ import pmm.gamble.gambling.Commands.CommandFiveCard;
 import pmm.gamble.gambling.Commands.CommandGamblers;
 
 public class GamblingMain extends JavaPlugin implements Listener{
+	public static GamblingMain plugin;
+
 	@Override
 	public void onEnable() {
+		plugin=this;
+		
 		Bukkit.getServer().getPluginManager().registerEvents((Listener) this, this);
 		
 		this.getCommand("Double").setExecutor(new CommandDouble());

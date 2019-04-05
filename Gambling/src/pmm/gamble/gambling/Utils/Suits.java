@@ -1,8 +1,8 @@
 package pmm.gamble.gambling.Utils;
 
 public enum Suits{
-	heart,
-	club,
+	hearts,
+	clubs,
 	spades,
-	diamond
+	diamonds
 }
